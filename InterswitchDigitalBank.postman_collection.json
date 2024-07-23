@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "1dc47416-52f7-48d0-9f36-f9d5f778b597",
+		"name": "InterswitchDigitalBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9011116"
+	},
+	"item": [
+		{
+			"name": "onboardCustomer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"lugard\",\r\n    \"lastName\":\"Lord\",\r\n    \"email\":\"lordlugard@gmail.com\",\r\n    \"bvn\":\"975312468\",\r\n    \"nin\":\"555555555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/digitalmiddleware/api/v1/customers/onboard",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"digitalmiddleware",
+						"api",
+						"v1",
+						"customers",
+						"onboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getdashboard",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9191/digitalmiddleware/api/v1/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"digitalmiddleware",
+						"api",
+						"v1",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBillCategories",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "paybill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/api/v1/bills/pay?productId=1&amount=100",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"v1",
+						"bills",
+						"pay"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/api/v1/transfers",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"v1",
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/api/v1/?username=admin&password=password",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"v1",
+						""
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
